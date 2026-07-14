@@ -17,8 +17,16 @@ export const AddNoteButton = () => {
       title: '',
       content: '',
     },
-    onSubmit: ({ value }) => {
-      console.log('Form is submitting ...', value)
+    onSubmit: async ({ value }) => {
+      const destination = '/api/v1/note'
+
+      const response = await fetch(destination, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(value),
+      })
     },
   })
 
