@@ -3,7 +3,7 @@
   "name": "encscribe",
   "icons": [
     {
-      "src": "/logo.svg",
+      "src": "/logo-rounded.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
