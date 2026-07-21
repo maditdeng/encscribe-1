@@ -9,6 +9,13 @@ app = FastAPI(title="encscribe backend")
 def root():
     return {"status": "ok", "server load": 95} #dictionery
 
+@app.get("/app-details")
+def app_details():
+    return {"content": "Encscribe: An encrypted note-taking application"}
+
+@app.get("/username")
+def get_username():
+    return {"content": "Maria"}
 
 if __name__ == "__main__":
     import uvicorn
